@@ -1,0 +1,9 @@
+Fingerprint the target's operating system.
+
+Commands
+bash
+sudo nmap -O 192.168.1.1
+sudo nmap -O --osscan-guess 192.168.1.1
+Explanation
+
+-O analyzes subtle differences in how a target's TCP/IP stack responds to crafted packets (TTL values, window sizes, packet ordering quirks) to guess the OS and version. --osscan-guess makes Nmap commit to a best guess even with imperfect matches, useful when the first attempt returns "no exact match."
